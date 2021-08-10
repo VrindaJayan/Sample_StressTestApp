@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="SampleApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SampleApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" >
+    <Page.Resources>
+        <LinearGradientBrush x:Key="ListViewItemBackgroundBrush" StartPoint="0,1" EndPoint="0,0">
+            <GradientStop Color="#8C000000" Offset="1"/>
+            <GradientStop Color="#5C000000" Offset="0"/>
+        </LinearGradientBrush>
+        <Style TargetType="ListView" >
+            <Setter Property="Background" Value="{StaticResource ListViewItemBackgroundBrush}" />
+        </Style>
+    </Page.Resources>
+    <Grid Margin="0,0,56,30" >
+        <TextBox x:Name="countText" HorizontalAlignment="Left" Margin="66,46,0,0" InputScope="Number" Header="No Of ListView To Be Added :" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Height="66"/>
+        <Button Content="StressTest" Margin="294,79,0,0" VerticalAlignment="Top" Width="98" Click="ClickHandler"/>
+         <VariableSizedWrapGrid Orientation="Horizontal" Background="AliceBlue" Margin="0,134,0,0" MaximumRowsOrColumns="20" x:Name="varGrid"/>
+   </Grid>
+</Page>
